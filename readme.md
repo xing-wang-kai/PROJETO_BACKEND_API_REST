@@ -11,16 +11,20 @@ Para o desenvoldimento deta API foram ultilizados práticas modernas de modelo R
 
 ___
 
-### DETALHES
+### DETALHES ROTAS FORNECEDORES
+
+O processo desta API é desenvolvida conforme o fluxo abaixo, o usuário podera fazer requisições para listar fornecedores, buscar fornecedores pelos seus respectivos ID, criar novos Fornecedores no banco do dados, editar antigas informações de Fornenceres por novas ou Deletar os dados de um Fornecedor usando seu ID.
+
+A Api faz uma verificação dos dados recebidos e casos o mesmos não sejam nos formatos desejados então será retornado um error informado que somente o tipo de dados como JSON serão aceitos para requisição.
 
 <img align="center" alt="retornos API" src="./assets/API REST.png">
 
 ___
 
-#### REQUISIÇÕES:
+#### REQUISIÇÕES ROTAS FORNECEDORES:
 
-!!Nesta API o usuário poderá fazer até 4 tipos de requisições no front-end
-{c:red}sendo elas{/c}:
+Nesta API o usuário poderá fazer até 4 tipos de requisições no front-end
+sendo elas:
 
 HTTP  | verbo         | tipo do botão             | rota                              |
 ------|---------------|---------------------------|-----------------------------------|
@@ -31,4 +35,45 @@ PUT   | Editar        |Edita Fornecedor           | http://<rota>/api/fornecedor
 DELETE| Deleta        |Delta Fornecedor           | http://<rota>/api/fornecedores/:id|
 
 ___
+
+##### GET FORNECEDORES
+
+O method GET fornecedores retorna todos forncedores que estão na base do banco de dados MySql, ao ir na rota teremos os seguintes dados dos forncedores como rotorno.
+
+id, empresa, email, categorias, criadoEm, AtualizadoEm, versão
+
+BANCO DE DADOS:
+
+<img align="center" alt="retornos API" src="./assets/bandodedados.png">
+
+RETORNO NO INSONMIA.
+
+<img align="center" alt="retornos API" src="./assets/apigetfornecedores.png">
+
+##### GET POR ID FORNECEDORES
+
+Methodo que retorna todos dados de um único forncedor somente pelo id informado no params da URL.
+
+<img align="center" alt="retornos API" src="./assets/apigetporidfornecedores.png">
+
+##### POST FORNECEDORES
+
+Metodo que adiciona um novo fornecedor para a lista de fornecedores.
+
+<img align="center" alt="retornos API" src="./assets/apipostfornecedores.png">
+
+##### PUT FORNECEDORES
+
+Metodo que busca pelo Id um determinado fornecedor e então corrigi os dados do mesmos para os dados novos que forem informado no body da requisição.
+
+<img align="center" alt="retornos API" src="./assets/apiputfornecedores.png">
+
+##### DELETE POR ID FORNECEDORES
+
+metodo que deleta um fornecedor da lista quando informado o id do mesmo no params da url.
+
+<img align="center" alt="retornos API" src="./assets/apideletefornecedores.png">
+
+____
+
 

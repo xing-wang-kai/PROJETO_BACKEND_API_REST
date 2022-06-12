@@ -28,14 +28,14 @@ router.put('/:id', async (req, res) => {
     const { id } = req.params;
     const dados = req.body;
     const retorno = await  Produtos.editar(id, {...dados, fornecedor: Number.parseInt(idFornecedor)})
-    res.status(204).json({retornos: retorno})
+    res.status(204).send({retornos: retorno})
 })
 
 router.delete('/:id', async (req, res) => {
     const idFornecedor = req.params.idFornecedor;
     const { id } = req.params;
-    const resultados = await Produtos.deletar(id)
-    res.status(204).json({retornos: `Produto com id = ${id} deletado com sucesso!!`, status: resultados})
+    const resultados = await Produtos.deletar(id, idFornecedor)
+    res.status(204).send({retornos: `Produto com id = ${id} referente a fornecedor ${idFornecedor} deletado com sucesso!!`, status: resultados})
 })
 
 

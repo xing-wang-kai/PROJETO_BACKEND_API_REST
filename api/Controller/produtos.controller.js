@@ -38,9 +38,9 @@ class Produtos {
         }
     }
 
-    deletar = async (id) => {
+    deletar = async (id, idFornecedor) => {
         try{
-            const resultado = await produtosDb.destroy({where: {id: Number.parseInt(id)}});
+            const resultado = await produtosDb.destroy({where: {id: Number.parseInt(id), fornecedor: Number.parseInt(idFornecedor)}});
             return resultado
         }catch(err){
             return err.message
