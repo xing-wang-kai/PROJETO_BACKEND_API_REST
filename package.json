@@ -1,0 +1,23 @@
+{
+  "name": "projeto_002_api_rest",
+  "version": "1.0.0",
+  "description": "Básico sobre APIS, API ESCALÁVEL, HTTP, ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./api/app.js"
+  },
+  "keywords": [],
+  "author": "Kai Wang",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.20.1"
+  }
+}
