@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { NotFound } = require('../errors/fornecedor.error.js');
 const Fornecedores = require('./fornecedores.controller.js');
 const roteadorProdutos = require('./produtos.router.js');
+const verificarFornecedor = require('./midlewares/produtos.midlewares.js')
 
 router.get('/', async (req, res) => {
     try{
@@ -70,6 +71,6 @@ router.delete('/:id', async ( req, res) => {
     }
 })
 
-router.use('/:idFornecedor/produtos', roteadorProdutos);
+router.use('/:idFornecedor/produtos',verificarFornecedor, roteadorProdutos);
 
 module.exports = router;

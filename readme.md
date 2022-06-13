@@ -76,4 +76,8 @@ metodo que deleta um fornecedor da lista quando informado o id do mesmo no param
 
 ____
 
+#### FLUXOGRAMA DO FLUXO DE REQUISIÇÕES PARA FORNECEDORES:
 
+<img align="center" alt="retornos API" src="./assets/fluxogramadaurldaapi.png">
+
+<img align="center" alt="retornos API" src="./assets/diagramadefluxosderequisicao.jpg">
