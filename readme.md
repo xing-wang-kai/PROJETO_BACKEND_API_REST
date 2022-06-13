@@ -97,4 +97,4 @@ No exemplo acima é uma requisição para o metodo GET na api retornando todos p
 
 ### METODOS E ROTAS DE FLUXOS PARA REQUISIÇÔES EM PRODUTOS
 
-<img align="center" alt="retornos API" src="./assets/visualdasrequisicoesparaprodutos.jpg">
+<img align="center" alt="retornos API" src="./assets/fluxogramadaurldaapiprodutos.jpg">
