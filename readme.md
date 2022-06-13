@@ -80,4 +80,21 @@ ____
 
 <img align="center" alt="retornos API" src="./assets/fluxogramadaurldaapi.png">
 
+#### METODOS E ROTAS DE FLUXOS PARA REQUISIÇÔES:
+
+Conforme a imagem abaixo, fica destado os metodos permitidos para requisições na rota fornecedore e suas urls.
+
 <img align="center" alt="retornos API" src="./assets/diagramadefluxosderequisicao.jpg">
+
+### REQUISÕES PARA PRODUTOS
+
+Esta rota está associada diretamente a rota fornecedos, cada fornecedor possui lista de produtos que está associado ao seu ID pela FOREIGN KEY.
+nas rotas são associadas a rotas informadas acimas com os seguites retornos.
+
+<img align="center" alt="retornos API" src="./assets/visualdasrequisicoesparaprodutos.jpg">
+
+No exemplo acima é uma requisição para o metodo GET na api retornando todos produtos que estão associados ao fornecedor cadastrado de id 7, caso não encontre nenhum fornecedor com este ID a API retorna error informando que o fornecedor não existe no banco de dados e desta maneira não há produtos associados ao mesmo.
+
+### METODOS E ROTAS DE FLUXOS PARA REQUISIÇÔES EM PRODUTOS
+
+<img align="center" alt="retornos API" src="./assets/visualdasrequisicoesparaprodutos.jpg">
